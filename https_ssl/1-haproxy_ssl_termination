@@ -46,5 +46,5 @@ frontend aloeverainc-frontend-https
 
 backend aloeverainc-backend
         balance roundrobin
-        server 6256-web-01 3.90.18.100:80 check
-        server 6256-web-02 3.89.231.38:80 check
+        server 6256-web-01 18.212.88.23:80 check
+        server 6256-web-02 54.243.22.47:80 check
