@@ -36,15 +36,15 @@ defaults
 frontend aloeverainc-frontend-http
         bind *:80
         mode http
-        http-request set-header X-Forwarded-Proto http
+	http-request set-header X-Forwarded-Proto http
         default_backend aloeverainc-backend
 
 frontend aloeverainc-frontend-https
-        bind *:443 ssl crt /etc/haproxy/certs/www.aloeverainc.tech.pem
-        http-request set-header X-Forwarded-Proto https
-        default_backend aloeverainc-backend
+	bind *:443 ssl crt /etc/haproxy/certs/www.aloeverainc.tech.pem
+	http-request set-header X-Forwarded-Proto https
+	default_backend aloeverainc-backend
 
 backend aloeverainc-backend
         balance roundrobin
-        server 6256-web-01 3.90.18.100:80 check
-        server 6256-web-02 3.89.231.38:80 check
+        server 6256-web-01 18.212.88.23:80 check
+        server 6256-web-02 54.243.22.47:80 check
